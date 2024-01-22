@@ -1,0 +1,14 @@
+{
+  "data_analysis_dir"     : "/data_6t/yth/analysis",
+  "log_dir"               : "/data_6t/yth/analysis",
+  "jms"                   : "/data_6t/guangyi_pipeline/ngs-jms-agent/deploy-yth/sendMessage.sh",
+  "disk_limit"            : 100,
+  "disk_limit_percent"    : 80,
+  "ram_limit_percent"     : 70,
+  "cpu_load_limit_percent": 60,
+  "wgs"                   : "/data_6t/guangyi_pipeline/script_v3/wes/bash.sh",
+  "wes"                   : "/data_6t/guangyi_pipeline/script_v3/wgs/bash.sh",
+  "panel"                 : "/data_6t/guangyi_pipeline/script_v3/panel/bash.sh",
+  "rnaseq"                : "/data_6t/guangyi_pipeline/script_v3/rna/bash.sh",
+  "metaboigniter"         : ""
+}
