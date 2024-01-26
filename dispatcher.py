@@ -29,7 +29,14 @@ def dispatcher(config_d):
 
 
 def main():
-    config_d = read_json("{0}/dispatcher_config.json".format(sys.path[0]))
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    if os.path.exists("{0}/configuration.json".format(script_dir)):
+        config_file = "{0}/configuration.json".format(script_dir)
+    elif os.path.exists("{0}/../configuration.json".format(script_dir)):
+        config_file = "{0}/../configuration.json".format(script_dir)
+    else:
+        exit("the configuration.json not exist")
+    config_d = read_json(config_file)
     log_dir = config_d['log_dir']
     logging.basicConfig(filename='{}/pipline_dispatcher.log'.format(log_dir),level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     dispatcher(config_d)
@@ -37,4 +44,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
