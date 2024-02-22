@@ -36,6 +36,12 @@ def get_pipeline_name(json_f):
     return pipeline
 
 
+def get_ukbTool_name(json_f):
+    json_d = read_json(json_f)
+    tool_name = json_d['ukbToolName']
+    return tool_name
+
+
 def run_cmd(cmd, analysis_dir):
     obj = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stat = obj.wait()
