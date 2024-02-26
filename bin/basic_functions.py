@@ -50,8 +50,8 @@ def run_cmd(cmd, analysis_dir):
         err_info = obj.stderr.read()
         try:
             with open('{}/Fail.log'.format(analysis_dir), 'w') as fail_f:
-                fail_f.write("Running Command: '{0}' is failed. \n{1}\n".format(cmd, err_info))
-            logging.error("Running Command: '{0}' is failed. \n{1}\n".format(cmd, err_info))
+                fail_f.write("Running Command: '{0}' is failed. \n{1}\n".format(cmd, err_info.decode('utf-8')))
+            logging.error("Running Command: '{0}' is failed. \n{1}\n".format(cmd, err_info.decode('utf-8')))
         except IOError as e:
             logging.error('fail to make log file : {}'.format(analysis_dir))
         sys.exit(1)
