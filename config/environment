@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# 配置PATH
+export PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/root/bin
+export PATH+=:/data_5t/lilin/biotools/nextflow
+export PATH+=:/data_6t/lilin/software_package/openlogic-openjdk-jre-11.0.8+10-linux-x64/bin
+
+# 配置时区
+export TZ='CST-8'
