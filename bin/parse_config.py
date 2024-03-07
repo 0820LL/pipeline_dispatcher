@@ -18,6 +18,8 @@ def invoke_pipeline(pipeline_config:str, config_d:dict) -> None:
         pipeline_cmd = "bash {}/{} {}".format(config_d['project_base_dir'], config_d["wgs"], pipeline_config)
     elif pipeline_name.strip().lower() == "rnaseq":
         pipeline_cmd = "bash {}/{} {}".format(config_d['project_base_dir'], config_d["rnaseq"], pipeline_config)
+    elif pipeline_name.strip().lower() == "metabolism":
+        pipeline_cmd = "bash {}/{} {}".format(config_d['project_base_dir'], config_d["metaboigniter"], pipeline_config)
     elif pipeline_name.strip().lower() == 'ukb':
         tool_name = get_ukbTool_name(pipeline_config)
         if tool_name.strip().lower() == 'bwa-men fastq read mapper':
